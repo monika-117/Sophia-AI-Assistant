@@ -1,0 +1,260 @@
+body{
+  background: #1a293e;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.container{
+display: flex;
+ flex-direction: column;
+}
+
+.text{
+  margin-top: 82vh;
+}
+
+p{
+  z-index: 999;
+  user-select: none;
+  margin-left:66px;
+  font-size:36px;
+  margin-top:-26px;
+  color:#fff;
+  padding:0px;
+  position:relative;
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+
+#loader-wrapper{
+  position: fixed;
+    top: 120px;
+    left:40%;
+    width: 300px;
+    height: 300px;
+   margin-left:30px;  
+}
+
+@media (max-width: 1100px) {
+  #loader-wrapper {
+      left: 35%;
+  }
+}
+
+#loader{
+  display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    margin: -175px 0 0 -175px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #4db8ff;
+    border-bottom-color: #b3e0ff;
+    border-right-color: #66c2ff;
+    border-left-color: #80ccff;
+    box-shadow: 0 0 15px #2187e7;
+    -webkit-animation: spin 30s linear infinite;
+    animation: spin 30s linear infinite;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-color: #1d5ca9;
+    border-style:dotted;
+    -webkit-animation: spin 18s linear infinite;
+    animation: spin 18s linear infinite;
+}
+
+#loader:after{
+  content: "";
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-color: #429bc0;
+    border-width:5px;  
+    border-style:dotted solid;
+    -webkit-animation: spin 60s linear infinite; 
+    animation: spin 60s linear infinite; 
+}
+
+
+#loader1:before{
+  content: "";
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    right: 70px;
+    bottom: 70px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-color: #4398ba;
+    border-style:dotted;
+    -webkit-animation: spin 18s linear infinite;
+    animation: spin 18s linear infinite;
+}
+
+
+#loader1:after{
+  content: "";
+    position: absolute;
+    top: 55px;
+    left: 55px;
+    right: 55px;
+    bottom: 55px;
+    border-radius: 50%;
+    border-color: #59c1eb;
+    border-width:5px;  
+    border-style:double dashed solid dotted ;
+    box-shadow: 0 0 40px #2187e7;
+    -webkit-animation: spin 60s linear infinite;
+    animation: spin 60s linear infinite;
+}
+
+/* for spinning */
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg); 
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+  0%   {
+    -webkit-transform: rotate(0deg); 
+    transform: rotate(0deg);
+}
+100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+}
+
+/* for text shadow */
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
+
+
+/**********************Input Box***************************/
+#textInput {
+  background-color: #181818a8;
+  border-color: blue;
+  box-shadow: 0 0 20px #5500ff,
+  inset 0 0 0px rgb(25, 0, 255);
+  border-radius: 8px;
+  color: white;
+  padding: 3px 0px 3px 20px;
+  margin: 0px 20%;
+}
+
+@media (max-width: 1200px) {
+  #textInput {
+    margin: 0px;
+  }
+}
+.input-field {
+  background-color: transparent;
+  border: none;
+  width: 95vh;
+  outline: none;
+  color: white;
+  font-family: cursive;
+}
+
+
+
+.glow-on-hover {
+  width: 35px;
+  height: 35px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  padding: 0px;
+  margin-left: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #181818a8
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+/**********************Input Box End***************************/
