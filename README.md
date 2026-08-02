@@ -250,15 +250,6 @@ recognize me
 face recognition
 ```
 
-## Calendar
-
-```text
-calendar
-my events
-schedule
-```
-
-Calendar requires Google Calendar credentials. If it is not configured, Sophia will say Google Calendar is not configured.
 
 ## API Keys
 
